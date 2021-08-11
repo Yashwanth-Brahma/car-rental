@@ -6,6 +6,7 @@ const FormProvider = ({ children }) => {
   const [formData, setFormData] = useState(null);
   const [placeBid, setPlaceBid] = useState(false);
   const [verifyBtn, setVerifyBtn] = useState(false);
+  const [verified, setVerified] = useState(false);
   return (
     <FormContext.Provider
       value={{
@@ -15,6 +16,8 @@ const FormProvider = ({ children }) => {
         setPlaceBid,
         setVerifyBtn,
         verifyBtn,
+        verified,
+        setVerified,
       }}>
       {children}
     </FormContext.Provider>

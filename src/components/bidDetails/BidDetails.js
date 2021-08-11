@@ -17,7 +17,7 @@ const BidDetails = () => {
       </div>
       <div className="flex flex-col justify-center">
         <p className=" font-extrabold text-3xl">
-          <BiRupee />
+          <BiRupee className="inline-block" />
           {amount}
         </p>
         <p className="text-sm text-gray-400">
