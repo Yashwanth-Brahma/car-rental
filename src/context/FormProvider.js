@@ -7,6 +7,16 @@ const FormProvider = ({ children }) => {
   const [placeBid, setPlaceBid] = useState(false);
   const [verifyBtn, setVerifyBtn] = useState(false);
   const [verified, setVerified] = useState(false);
+  const [bidSubmit, setBidSubmit] = useState(false);
+
+  const handleHomeClick = () => {
+    setPlaceBid(false);
+    setFormData(null);
+    setVerifyBtn(false);
+    setVerified(false);
+    setBidSubmit(false);
+  };
+
   return (
     <FormContext.Provider
       value={{
@@ -18,6 +28,9 @@ const FormProvider = ({ children }) => {
         verifyBtn,
         verified,
         setVerified,
+        bidSubmit,
+        setBidSubmit,
+        handleHomeClick,
       }}>
       {children}
     </FormContext.Provider>

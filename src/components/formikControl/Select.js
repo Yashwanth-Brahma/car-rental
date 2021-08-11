@@ -16,7 +16,7 @@ const Select = ({ label, name, options, req = true, ...rest }) => {
         name={name}
         id={label}
         {...rest}
-        className="appearance-none block w-full text-gray-700 border border-gray-500 rounded py-3 px-4 mb-0 leading-tight focus:border-blue-500 focus:outline-none focus:bg-white font-semibold">
+        className="block w-full text-gray-700 border border-gray-500 rounded py-3 px-4 mb-0 leading-tight focus:border-blue-500 focus:outline-none focus:bg-white font-semibold">
         {options.map((option) => {
           return (
             <option key={option.value} value={option.value}>

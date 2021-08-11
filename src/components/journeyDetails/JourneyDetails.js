@@ -3,7 +3,7 @@ import { useGlobalContext } from "../../context/FormProvider";
 import { BiEditAlt } from "react-icons/bi";
 
 const JourneyDetails = () => {
-  const { formData } = useGlobalContext();
+  const { formData, setPlaceBid } = useGlobalContext();
   const { source, destination, carType, travellers } = formData;
   return (
     <div className="flex justify-between w-full">
@@ -17,7 +17,9 @@ const JourneyDetails = () => {
         </p>
       </div>
       <div>
-        <p className="text-blue-600 font-semibold">
+        <p
+          className="text-blue-600 font-semibold cursor-pointer"
+          onClick={() => setPlaceBid(false)}>
           <BiEditAlt className="inline-block" />
           Edit
         </p>

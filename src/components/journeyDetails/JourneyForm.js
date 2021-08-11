@@ -29,7 +29,7 @@ const JourneyForm = ({ buttonVal }) => {
   const onSubmit = (values, { setSubmitting, resetForm }) => {
     setSubmitting(false);
     resetForm();
-    setFormData(values);
+    setFormData(formData ? { ...formData, ...values } : values);
     setPlaceBid(true);
   };
 
