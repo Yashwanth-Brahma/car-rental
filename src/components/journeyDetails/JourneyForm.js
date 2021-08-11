@@ -5,7 +5,7 @@ import * as Yup from "yup";
 import { useGlobalContext } from "../../context/FormProvider";
 
 const JourneyForm = ({ buttonVal }) => {
-  const { setFormData, formData } = useGlobalContext();
+  const { setFormData, formData, setPlaceBid } = useGlobalContext();
 
   const options = [
     { key: "Select Car", value: "" },
@@ -30,7 +30,7 @@ const JourneyForm = ({ buttonVal }) => {
     setSubmitting(false);
     resetForm();
     setFormData(values);
-    console.log(values);
+    setPlaceBid(true);
   };
 
   return (
@@ -45,7 +45,7 @@ const JourneyForm = ({ buttonVal }) => {
           if (value > 6) {
             return "Travellers should be 6 or less than 6";
           }
-          if (carType === "Sedan" || (carType === "HatchBack" && value > 4))
+          if ((carType === "Sedan" || carType === "HatchBack") && value > 4)
             return "only 4 or less than 4 travellers allowed Sedan & Hatchback";
         };
         // console.log(formik.values);

@@ -3,7 +3,7 @@ import JourneyForm from "./JourneyForm";
 
 const JourneyInput = () => {
   return (
-    <div className="mt-4">
+    <div>
       <JourneyForm buttonVal="Enter Bid Details" />
     </div>
   );

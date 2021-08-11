@@ -16,9 +16,11 @@ const CheckBox = ({ label, name, options, ...rest }) => {
                   {...field}
                   {...rest}
                   value={option.value}
-                  checked={field.value.includes(option.value)}
+                  checked={field.value && field.value.includes(option.value)}
                 />
-                <label htmlFor={option.value}>{option.key}</label>
+                <label htmlFor={option.value} className="ml-2">
+                  {option.key}
+                </label>
               </Fragment>
             );
           });
